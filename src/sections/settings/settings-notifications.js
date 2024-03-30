@@ -12,6 +12,8 @@ import {
   Typography,
   Unstable_Grid2 as Grid
 } from '@mui/material';
+import { IssueCard } from './IssueCard';
+
 
 export const SettingsNotifications = () => {
   const handleSubmit = useCallback(
@@ -25,77 +27,38 @@ export const SettingsNotifications = () => {
     <form onSubmit={handleSubmit}>
       <Card>
         <CardHeader
-          subheader="Manage the notifications"
-          title="Notifications"
+          subheader="See various issues in your locality"
+          title="Issues Near me "
         />
         <Divider />
         <CardContent>
-          <Grid
-            container
-            spacing={6}
-            wrap="wrap"
-          >
-            <Grid
-              xs={12}
-              sm={6}
-              md={4}
-            >
-              <Stack spacing={1}>
-                <Typography variant="h6">
-                  Notifications
-                </Typography>
-                <Stack>
-                  <FormControlLabel
-                    control={<Checkbox defaultChecked />}
-                    label="Email"
-                  />
-                  <FormControlLabel
-                    control={<Checkbox defaultChecked />}
-                    label="Push Notifications"
-                  />
-                  <FormControlLabel
-                    control={<Checkbox />}
-                    label="Text Messages"
-                  />
-                  <FormControlLabel
-                    control={<Checkbox defaultChecked />}
-                    label="Phone calls"
-                  />
-                </Stack>
-              </Stack>
+          <Grid container direction="row" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+            <Grid>
+              <IssueCard title="Roads" 
+              subtitle="Potholes on Roads" 
+              activeStep={2}/>
             </Grid>
-            <Grid
-              item
-              md={4}
-              sm={6}
-              xs={12}
-            >
-              <Stack spacing={1}>
-                <Typography variant="h6">
-                  Messages
-                </Typography>
-                <Stack>
-                  <FormControlLabel
-                    control={<Checkbox defaultChecked />}
-                    label="Email"
-                  />
-                  <FormControlLabel
-                    control={<Checkbox />}
-                    label="Push Notifications"
-                  />
-                  <FormControlLabel
-                    control={<Checkbox defaultChecked />}
-                    label="Phone calls"
-                  />
-                </Stack>
-              </Stack>
+            <Grid>
+              <IssueCard title="Sanitation"
+              subtitle="Garbage Dumping in Public Places" 
+              activeStep={5}/>
             </Grid>
-          </Grid>
+            <Grid>
+              <IssueCard title="Sanitation"
+              subtitle="Garbage Dumping in Public Places" 
+              activeStep={5}/>
+            </Grid>            
+            <Grid>
+              <IssueCard title="Sanitation"
+              subtitle="Garbage Dumping in Public Places" 
+              activeStep={5}/>
+            </Grid>
+        </Grid>
         </CardContent>
         <Divider />
         <CardActions sx={{ justifyContent: 'flex-end' }}>
           <Button variant="contained">
-            Save
+            Raise a Complaint
           </Button>
         </CardActions>
       </Card>

@@ -1,8 +1,6 @@
 import { useCallback, useMemo, useState } from 'react';
 import Head from 'next/head';
 import { subDays, subHours } from 'date-fns';
-import ArrowDownOnSquareIcon from '@heroicons/react/24/solid/ArrowDownOnSquareIcon';
-import ArrowUpOnSquareIcon from '@heroicons/react/24/solid/ArrowUpOnSquareIcon';
 import PlusIcon from '@heroicons/react/24/solid/PlusIcon';
 import { Box, Button, Container, Stack, SvgIcon, Typography } from '@mui/material';
 import { useSelection } from 'src/hooks/use-selection';
@@ -15,7 +13,7 @@ const now = new Date();
 
 const data = [
   {
-    id: '5e887ac47eed253091be10cb',
+    id: 1,
     address: {
       city: 'Cleveland',
       country: 'USA',
@@ -29,7 +27,7 @@ const data = [
     phone: '304-428-3097'
   },
   {
-    id: '5e887b209c28ac3dd97f6db5',
+    id: 2,
     address: {
       city: 'Atlanta',
       country: 'USA',
@@ -43,7 +41,7 @@ const data = [
     phone: '712-351-5711'
   },
   {
-    id: '5e887b7602bdbc4dbb234b27',
+    id: 3,
     address: {
       city: 'North Canton',
       country: 'USA',
@@ -57,7 +55,7 @@ const data = [
     phone: '770-635-2682'
   },
   {
-    id: '5e86809283e28b96d2d38537',
+    id: 4,
     address: {
       city: 'Madrid',
       country: 'Spain',
@@ -71,7 +69,7 @@ const data = [
     phone: '908-691-3242'
   },
   {
-    id: '5e86805e2bafd54f66cc95c3',
+    id: 5,
     address: {
       city: 'San Diego',
       country: 'USA',
@@ -85,12 +83,10 @@ const data = [
     phone: '972-333-4106'
   },
   {
-    id: '5e887a1fbefd7938eea9c981',
+    id: 6,
     address: {
-      city: 'Berkeley',
-      country: 'USA',
+      city: 'Society Hall',
       state: 'California',
-      street: '317 Angus Road'
     },
     avatar: '/assets/avatars/avatar-penjani-inyene.png',
     createdAt: subDays(subHours(now, 5), 4).getTime(),
@@ -99,7 +95,7 @@ const data = [
     phone: '858-602-3409'
   },
   {
-    id: '5e887d0b3d090c1b8f162003',
+    id: 7,
     address: {
       city: 'Carson City',
       country: 'USA',
@@ -113,7 +109,7 @@ const data = [
     phone: '415-907-2647'
   },
   {
-    id: '5e88792be2d4cfb4bf0971d9',
+    id: 8,
     address: {
       city: 'Los Angeles',
       country: 'USA',
@@ -127,7 +123,7 @@ const data = [
     phone: '702-661-1654'
   },
   {
-    id: '5e8877da9a65442b11551975',
+    id: 9,
     address: {
       city: 'Murray',
       country: 'USA',
@@ -141,7 +137,7 @@ const data = [
     phone: '313-812-8947'
   },
   {
-    id: '5e8680e60cba5019c5ca6fda',
+    id: 10,
     address: {
       city: 'Salt Lake City',
       country: 'USA',
@@ -199,7 +195,7 @@ const Page = () => {
     <>
       <Head>
         <title>
-          Customers | Devias Kit
+          Events & Notifications
         </title>
       </Head>
       <Box
@@ -218,34 +214,8 @@ const Page = () => {
             >
               <Stack spacing={1}>
                 <Typography variant="h4">
-                  Customers
+                  Events & Notifications
                 </Typography>
-                <Stack
-                  alignItems="center"
-                  direction="row"
-                  spacing={1}
-                >
-                  <Button
-                    color="inherit"
-                    startIcon={(
-                      <SvgIcon fontSize="small">
-                        <ArrowUpOnSquareIcon />
-                      </SvgIcon>
-                    )}
-                  >
-                    Import
-                  </Button>
-                  <Button
-                    color="inherit"
-                    startIcon={(
-                      <SvgIcon fontSize="small">
-                        <ArrowDownOnSquareIcon />
-                      </SvgIcon>
-                    )}
-                  >
-                    Export
-                  </Button>
-                </Stack>
               </Stack>
               <div>
                 <Button
@@ -268,8 +238,6 @@ const Page = () => {
               onDeselectOne={customersSelection.handleDeselectOne}
               onPageChange={handlePageChange}
               onRowsPerPageChange={handleRowsPerPageChange}
-              onSelectAll={customersSelection.handleSelectAll}
-              onSelectOne={customersSelection.handleSelectOne}
               page={page}
               rowsPerPage={rowsPerPage}
               selected={customersSelection.selected}

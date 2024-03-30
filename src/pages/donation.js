@@ -1,13 +1,13 @@
 import Head from 'next/head';
 import { Box, Container, Stack, Typography } from '@mui/material';
-import { SettingsNotifications } from 'src/sections/settings/settings-notifications';
 import { Layout as DashboardLayout } from 'src/layouts/dashboard/layout';
+import { DonationsNotifications } from 'src/sections/donation/donation-notification';
 
 const Page = () => (
   <>
     <Head>
       <title>
-        My Issues
+        Donation Portal
       </title>
     </Head>
     <Box
@@ -20,9 +20,9 @@ const Page = () => (
       <Container maxWidth="lg">
         <Stack spacing={3}>
           <Typography variant="h4">
-            My Issues
+            Donation Portal
           </Typography>
-          <SettingsNotifications />
+          <DonationsNotifications/>
         </Stack>
       </Container>
     </Box>

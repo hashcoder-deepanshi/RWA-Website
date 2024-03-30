@@ -19,7 +19,7 @@ export const items = [
     )
   },
   {
-    title: 'Customers',
+    title: 'Events & Notifications',
     path: '/customers',
     icon: (
       <SvgIcon fontSize="small">
@@ -28,7 +28,7 @@ export const items = [
     )
   },
   {
-    title: 'Companies',
+    title: 'Services',
     path: '/companies',
     icon: (
       <SvgIcon fontSize="small">
@@ -37,16 +37,7 @@ export const items = [
     )
   },
   {
-    title: 'Account',
-    path: '/account',
-    icon: (
-      <SvgIcon fontSize="small">
-        <UserIcon />
-      </SvgIcon>
-    )
-  },
-  {
-    title: 'Settings',
+    title: 'My Issues',
     path: '/settings',
     icon: (
       <SvgIcon fontSize="small">
@@ -55,30 +46,22 @@ export const items = [
     )
   },
   {
-    title: 'Login',
-    path: '/auth/login',
-    icon: (
-      <SvgIcon fontSize="small">
-        <LockClosedIcon />
-      </SvgIcon>
-    )
-  },
-  {
-    title: 'Register',
-    path: '/auth/register',
-    icon: (
-      <SvgIcon fontSize="small">
-        <UserPlusIcon />
-      </SvgIcon>
-    )
-  },
-  {
-    title: 'Error',
-    path: '/404',
+    title: 'Donation Portal',
+    path: '/donation',
     icon: (
       <SvgIcon fontSize="small">
         <XCircleIcon />
       </SvgIcon>
     )
-  }
+  },
+  {
+    title: 'Profile',
+    path: '/account',
+    icon: (
+      <SvgIcon fontSize="small">
+        <UserIcon />
+      </SvgIcon>
+    )
+  },
+
 ];
